@@ -6,19 +6,19 @@ describe 'homesick' do
 		let(:params){{
 			:git_uri => 'git@github.com:cmurphy/your_couch.git',
 			}}
-	  	it do
-	    	should contain_package('homesick').with({
-	      	:provider => 'gem'
-	    	})
-	    	should contain_exec("homesick symlink your_couch")
-	    end
+	  	# it do
+	   #  	should contain_package('homesick').with({
+	   #    	:provider => 'gem'
+	   #  	})
+	   #  	should contain_exec("homesick symlink your_couch")
+	   #  end
 
   	# end
 
   	# context " when passed short git uri" do
-		let(:params){{
-			:git_uri => 'cmurphy/your_couch',
-			}}
+		# let(:params){{
+		# 	:git_uri => 'cmurphy/your_couch',
+		# 	}}
 	  	it do
 	    	should contain_package('homesick').with({
 	      		:provider => 'gem'

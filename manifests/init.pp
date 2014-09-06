@@ -23,6 +23,10 @@ class homesick (
 		creates 	=> "~/.homesick/${project_name}"
 	}
 
-	file { "homesick symlink ${project_name}": }
+	#no need for idempotency check as homesick does that. 
+	#maybe it's faster anyways? something shells out either way.
+	exec { "homesick link ${project_name} --force": }
+
+	# TODO: check for .homesickrc file and execute it 
 
 }
