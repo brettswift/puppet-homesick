@@ -33,9 +33,11 @@ class homesick (
   file { $homesick_dir:
     ensure => directory,
   }
-  ruby::local { $homesick_dir:
-    version => '2.1.0'
-  }
+  #doesn't seem to be required, but breaks testing
+  #TODO: re-enable locking down to a ruby in the future. 
+  # ruby::local { $homesick_dir:
+  #   version => '2.1.0'
+  # }
   ruby_gem { 'homesick for all rubies':
     gem          => 'homesick',
     ruby_version => '*',
@@ -68,7 +70,7 @@ class homesick (
   exec {"homesick pull ${project_name}": }
 
   File[$homesick_dir]->
-  Ruby::Local[$homesick_dir]->
+  # Ruby::Local[$homesick_dir]->
   Ruby_gem['homesick for all rubies']->
   Exec["homesick clone ${dotfile_uri}"]->
   Exec["homesick link ${project_name} --force"] ->

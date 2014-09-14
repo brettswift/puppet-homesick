@@ -8,6 +8,7 @@ end
 
 group  :development, :test do
   gem "rake",                    :require => false
+  gem "rspec", '2.99.0',         :require => false
   gem "puppet-lint",             :require => false
   gem "rspec-puppet",            :git => 'https://github.com/rodjek/rspec-puppet.git',
                                  :require => false
