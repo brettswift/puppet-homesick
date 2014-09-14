@@ -15,16 +15,16 @@ describe 'homesick' do
 
   	# end
 
-  	# context " when passed short git uri" do
-		# let(:params){{
-		# 	:git_uri => 'cmurphy/your_couch',
-		# 	}}
+  	context " when passed short git uri" do
+		let(:params){{
+			:git_uri => 'cmurphy/your_couch',
+			}}
 	  	it do
-	    	should contain_package('homesick').with({
-	      		:provider => 'gem'
-	    	})
-	    	should contain_exec("homesick symlink your_couch")
+	    	# should contain_file('homesick::castle').with({
+	     #  		:provider => 'gem'
+	    	# })
+	    	should contain_exec("homesick link your_couch")
 	    end
-	# end
+	end
 
 end

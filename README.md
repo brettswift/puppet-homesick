@@ -20,3 +20,10 @@ include homesick
 
 Write code. Run `script/cibuild` to test it. Check the `script`
 directory for other useful tools.
+
+To test with guard, and growl: 
+*~/.guardrc*
+```bash
+Guard.options[:notify] = true
+Guard.options[:notification] = 'growl'
+```
