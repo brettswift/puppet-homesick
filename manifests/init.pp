@@ -1,8 +1,4 @@
-# Public: Install homesick
-#
-# Examples
-#
-#   include homesick
+
 class homesick (
 	$git_uri = undef,
 	$github_project_name = undef,
