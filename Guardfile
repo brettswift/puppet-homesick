@@ -2,7 +2,7 @@
 #simply run `guard` to have your tests run continuously so you don't have
 #to alt-tab and run tests all the time.
 
-guard 'rake', :task => 'all' do
+guard 'rake', :task => 'test' do
   watch(%r{^spec\/(?!fixtures|acceptance)\/*(.+)_spec.rb})
   # watch(%r{^manifests/(.+)\.pp$}) 
   watch(%r{^manifests\/(.+).pp$}) { |m| "spec/classes/#{m[1]}_spec.rb" }

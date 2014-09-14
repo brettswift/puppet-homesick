@@ -26,8 +26,6 @@ class homesick (
     $project_name     = $github_project_name
     $dotfile_uri    = "git@github.com:${::github_login}/${project_name}.git"
     }
-    #ensure parsing worked
-  if(empty($dotfile_uri)) {fail('dotfile_uri was empty')}
 
   #on first run, create.  Use this folder for .ruby-version
   file { $homesick_dir:
@@ -47,9 +45,6 @@ class homesick (
     cwd     => "/Users/${::boxen_user}/.homesick",
     user     => $::boxen_user,
     environment => [
-            # "RBENV_ROOT=/opt/boxen/rbenv",
-            # "RUBYLIB=''",
-            # "BUNDLE_BIN_PATH=''",
             "RUBYOPT=''",  # if is:  'RUBYOPT=-rbundler/setup' then this errors looking for rake. 
             "HOME=/Users/${::boxen_user}" #not sure why it can't find the HOME variable.. 
             ],

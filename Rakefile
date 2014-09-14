@@ -29,3 +29,6 @@ task :default => [:all]
 
 desc "runs all tests"
 task :all => [:validate, :spec, :lint]
+
+desc "runs quick tests for guard"
+task :test => [:validate, :lint, :spec_prep, :spec_standalone]
