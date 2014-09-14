@@ -2,7 +2,10 @@ fixtures:
   repositories:
     stdlib:
       repo: "git://github.com/puppetlabs/puppetlabs-stdlib"
-      ref: "4.3.2" 
+      ref: "4.3.2"
+    ruby:
+      repo: "git://github.com/boxen/puppet-ruby"
+      ref:  "8.1.4"
     repository:
       repo: "git://github.com/boxen/puppet-repository"
       ref:  "2.3.0"
