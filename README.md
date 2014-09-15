@@ -1,7 +1,6 @@
 # Homesick Puppet Module for Boxen
 
 [![Build Status](https://travis-ci.org/brettswift/puppet-homesick.png?branch=master)](https://travis-ci.org/brettswift/puppet-homesick)
-[![Code Climate](https://codeclimate.com/github/brettswift/puppet-homesick/badges/gpa.svg)](https://codeclimate.com/github/brettswift/puppet-homesick)
 
 Install [homesick](https://github.com/technicalpickles/homesick)
 
